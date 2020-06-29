@@ -212,3 +212,6 @@
 </div>
 
 @endsection
+
+</body>
+</html>

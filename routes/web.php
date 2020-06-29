@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::get('/', function(){
 	return view('frontend.index');
 });
+
+Route::get('/master', function(){
+	return view('backend.master');
+});
+
