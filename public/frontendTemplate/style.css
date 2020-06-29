@@ -3,6 +3,11 @@ body{
 }
 nav{
 	font-family: Q2;
+	/*background: linear-gradient(to right, #c4d94e,#99f2c8);*/
+}
+#navbarSupportedContent a{
+	color: #73AD4E;
+	font-size: 20px;
 }
 .carousel-item{
 	width: 100%;
@@ -15,4 +20,23 @@ nav{
 #showingmovie img{
 	width: auto;
 	height: 50vh;
+}
+#blog{
+	background: linear-gradient(to right, #c4d94e,#99f2c8);
+}
+#blog .box{
+	border: 2px solid transparent;
+	border-image-source: linear-gradient(45deg, #00467F, #93F9B9);
+	border-image-slice: 1;
+}
+.box{
+	border: 2px solid transparent;
+	border-image-source: linear-gradient(45deg, #00467F, #93F9B9);
+	border-image-slice: 1;
+}
+footer{
+	line-height: 2em;
+}
+#icon i{
+	color: #73AD4E;
 }
