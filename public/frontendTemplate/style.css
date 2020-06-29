@@ -1,0 +1,15 @@
+nav{
+	font-family: Q2;
+}
+.carousel-item{
+	width: 100%;
+	height: 70vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background: linear-gradient(to bottom, rgba(218,165,146,.4)0,rgba(218,165,146.4)100%),url(images/p6.jpeg);
+}
+#showingmovie img{
+	width: auto;
+	height: 50vh;
+}

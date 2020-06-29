@@ -1,0 +1,16 @@
+@font-face{
+	font-family: Q1;
+	src: url('font/Quicksand/static/Quicksand-Regular.ttf');
+}
+@font-face{
+	font-family: Q2;
+	src: url('font/Quicksand/static/Quicksand-Bold.ttf');
+}
+@font-face{
+	font-family: L1;
+	src: url('font/Londrina_Shadow/LondrinaShadow-Regular.ttf');
+}
+@font-face{
+	font-family: M1;
+	src: url('font/Ma_Shan_Zheng/MaShanZheng-Regular.ttf');
+}
