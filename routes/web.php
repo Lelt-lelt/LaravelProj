@@ -25,3 +25,9 @@ Route::get('/master', function(){
 	return view('backend.master');
 });
 
+Route::get('/detail', function(){
+	return view('frontend.detail');
+});
+
+
+

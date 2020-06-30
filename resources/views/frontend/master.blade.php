@@ -17,8 +17,17 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('frontendTemplate/font.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('frontendTemplate/style.css')}}">
 
+	<link rel="stylesheet" href="{{asset('style.css')}}">
+
+	<script type="text/javascript" src="{{asset('custom.js')}}"></script>
+
 </head>
 <body>
+	<!-- navigation -->
+
+
+
 	@yield('content')
 </body>
+
 </html>
