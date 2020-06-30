@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/', function(){
 	return view('frontend.index');
@@ -25,9 +22,15 @@ Route::get('/master', function(){
 	return view('backend.master');
 });
 
+
 Route::get('/detail', function(){
 	return view('frontend.detail');
 });
 
 
+
+
+Route::get('/login',function(){
+	return view('frontend.login');
+});
 

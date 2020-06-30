@@ -3,6 +3,11 @@ body{
 }
 nav{
 	font-family: Q2;
+	/*background: linear-gradient(to right, #c4d94e,#99f2c8);*/
+}
+#navbarSupportedContent a{
+	color: #73AD4E;
+	font-size: 20px;
 }
 .carousel-item{
 	width: 100%;
@@ -12,7 +17,26 @@ nav{
 	background-size: cover;
 	background: linear-gradient(to bottom, rgba(218,165,146,.4)0,rgba(218,165,146.4)100%),url(images/p6.jpeg);
 }
-#showingmovie img{
-	width: auto;
-	height: 50vh;
+
+#blog{
+	background: linear-gradient(to right, #c4d94e,#99f2c8);
+}
+#blog .box{
+	border: 2px solid transparent;
+	border-image-source: linear-gradient(45deg, #00467F, #93F9B9);
+	border-image-slice: 1;
+}
+.box{
+	border: 2px solid transparent;
+	border-image-source: linear-gradient(45deg, #00467F, #93F9B9);
+	border-image-slice: 1;
+}
+footer{
+	line-height: 2em;
+}
+#icon i{
+	color: #73AD4E;
+}
+#divider{
+	border-color: #73AD4E;
 }
