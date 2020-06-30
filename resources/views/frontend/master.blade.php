@@ -19,7 +19,50 @@
 
 </head>
 <body>
+	<!-- navigation -->
+<nav class="navbar navbar-expand-lg navbar-light">
+	<div class="container">
+		<a class="navbar-brand" href="#"><img src="{{asset('frontendTemplate/images/logo.png')}}" class="img-fluid" style="height: 70px; width: 110px;"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mx-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item mx-lg-3">
+					<a class="nav-link" href="#movie">Movie</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#blog">Blog</a>
+				</li>
+				<li class="nav-item dropdown mx-lg-3">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Dropdown
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href=""><i class="fas fa-user-alt mr-2"></i>Login</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
 	@yield('content')
+	<!-- footer -->
 	<div class="container">
 		<footer class="site-footer custom-border-top">
 			<div class="container">
@@ -59,14 +102,14 @@
 							<h3 class="footer-heading mb-4">Contact Info</h3>
 							<ul class="list-unstyled" id="icon">
 								<li class="address"><i class="fas fa-map-marker-alt mr-3"></i>Yangon, Myanmar</li>
-								<li class="phone"><i class="fas fa-phone-alt mr-3"></i>+2 392 3929 210</li>
+								<li class="phone"><i class="fas fa-phone-alt mr-3"></i>+95 912345678</li>
 								<li class="email"><i class="fas fa-envelope mr-3"></i>emailaddress@domain.com</li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-12 my-5">
 						<p class="text-center mb-0">
-							Copyright &copy; All rights reserved | This template is made with <i class="fas fa-heart"></i> by Batch-15 Group-2
+							Copyright &copy; All rights reserved | This template is made with <i class="fas fa-heart" style="color: #73AD4E;"></i> by Batch-15 Group-2
 						</p>
 					</div>
 				</div>

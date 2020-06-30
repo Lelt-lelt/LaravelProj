@@ -25,3 +25,7 @@ Route::get('/master', function(){
 	return view('backend.master');
 });
 
+Route::get('/login',function(){
+	return view('frontend.login');
+});
+
