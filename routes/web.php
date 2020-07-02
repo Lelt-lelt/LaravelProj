@@ -27,10 +27,10 @@ Route::get('/detail', function(){
 	return view('frontend.detail');
 });
 
-
-
-
 Route::get('/login',function(){
 	return view('frontend.login');
 });
 
+Route::get('/booking',function(){
+	return view('frontend.booking');
+});
