@@ -18,18 +18,21 @@ nav{
 	background: linear-gradient(to bottom, rgba(218,165,146,.4)0,rgba(218,165,146.4)100%),url(images/p6.jpeg);
 }
 
-#blog{
+#movieup{
 	background: linear-gradient(to right, #c4d94e,#99f2c8);
 }
 #blog .box{
 	border: 2px solid transparent;
-	border-image-source: linear-gradient(45deg, #00467F, #93F9B9);
+	border-image-source: linear-gradient(45deg, #c4d94e, #99f2c8);
 	border-image-slice: 1;
 }
 .box{
 	border: 2px solid transparent;
-	border-image-source: linear-gradient(45deg, #00467F, #93F9B9);
+	border-image-source: linear-gradient(45deg, #c4d94e, #99f2c8);
 	border-image-slice: 1;
+}
+.box .card-body{
+	height: 270px;
 }
 footer{
 	line-height: 2em;

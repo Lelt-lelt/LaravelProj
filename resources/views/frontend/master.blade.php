@@ -73,8 +73,9 @@
 
 	@yield('content')
 	<!-- footer -->
+	<hr id="divider" class="my-5">
 	<div class="container">
-		<footer class="site-footer custom-border-top">
+		<footer class="site-footer custom-border-top" id="about">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -117,8 +118,10 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-12 my-5">
-						<p class="text-center mb-0">
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<p class="text-center py-2">
 							Copyright &copy; All rights reserved | This template is made with <i class="fas fa-heart" style="color: #73AD4E;"></i> by Batch-15 Group-2
 						</p>
 					</div>

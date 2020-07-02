@@ -45,7 +45,4 @@
 		</div>
 	</div>
 </div>
-<div class="my-5">
-	<hr id="divider">
-</div>
 @endsection
