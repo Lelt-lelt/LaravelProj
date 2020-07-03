@@ -1,0 +1,22 @@
+.card-header h6{
+	background: linear-gradient(to right, #8360c3,#2ebf91);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.card-header a {
+	background: linear-gradient(to right, #8360c3,#2ebf91);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	border: 2px solid transparent;
+	border-image-source: linear-gradient(45deg, #8360c3,#2ebf91);
+	border-image-slice: 1;
+}
+.form-group .btn {
+	background: linear-gradient(to right, #8360c3,#2ebf91);
+}
+tbody a{
+	background: linear-gradient(to right, #8360c3,#2ebf91);
+}
+tbody input{
+	background: linear-gradient(to right, #FF416C,#FF4B2B);
+}

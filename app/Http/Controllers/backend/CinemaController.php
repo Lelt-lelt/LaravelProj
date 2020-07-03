@@ -4,6 +4,8 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Cinema;
+use App\Township;
 
 class CinemaController extends Controller
 {
@@ -14,7 +16,8 @@ class CinemaController extends Controller
      */
     public function index()
     {
-        //
+        $cinemas = Cinema::all();
+        return view('backend.cinema.index', compact('cinemas'));
     }
 
     /**
@@ -24,7 +27,8 @@ class CinemaController extends Controller
      */
     public function create()
     {
-        //
+        $township = Township::all();
+        return view('backend.cinema.create', compact('township'));
     }
 
     /**
@@ -35,7 +39,21 @@ class CinemaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=> 'required|max:191',
+            'address'=>'required|max:191',
+            'phone'=>'required|max:191',
+            'tname'=>'required|max:191'
+        ]);
+
+        $cinema = new Cinema;
+        $cinema->name = $request->name;
+        $cinema->phone = $request->phone;
+        $cinema->address = $request->address;
+        $cinema->township_id = $request->tname;
+        $cinema->save();
+
+        return redirect()->route('cinemas.index');
     }
 
     /**
@@ -46,7 +64,7 @@ class CinemaController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('backend.cinema.detail');
     }
 
     /**
@@ -57,7 +75,9 @@ class CinemaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $township = Township::all();
+        $cinema = Cinema::find($id);
+        return view('backend.cinema.edit', compact('township','cinema'));
     }
 
     /**
@@ -69,7 +89,22 @@ class CinemaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // validation
+        $request->validate([
+            'name'=> 'required|max:191',
+            'address'=>'required|max:191',
+            'phone'=>'required|max:191',
+            'tname'=>'required|max:191'
+        ]);
+
+        $cinema = Cinema::find($id);
+        $cinema->name = $request->name;
+        $cinema->phone = $request->phone;
+        $cinema->address = $request->address;
+        $cinema->township_id = $request->tname;
+        $cinema->save();
+
+        return redirect()->route('cinemas.index');
     }
 
     /**
@@ -80,6 +115,9 @@ class CinemaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cinema = Cinema::find($id);
+        $cinema->delete();
+
+        return redirect()->route('cinemas.index');
     }
 }

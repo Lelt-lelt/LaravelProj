@@ -106,7 +106,7 @@
 				<option value="3">Three</option>
 			</select>
 		</div>
-		<div class="col-lg-9 my-5">
+		<div class="col-lg-9 my-5" id="now">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12">
 					<!-- Button trigger modal -->

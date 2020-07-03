@@ -34,3 +34,10 @@ Route::get('/login',function(){
 Route::get('/booking',function(){
 	return view('frontend.booking');
 });
+
+Route::resource('cities','backend\CityController');
+Route::resource('cinemas','backend\CinemaController');
+Route::resource('theaters','backend\TheaterController');
+Route::resource('bookings','backend\BookingController');
+
+

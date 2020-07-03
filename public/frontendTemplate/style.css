@@ -43,3 +43,7 @@ footer{
 #divider{
 	border-color: #73AD4E;
 }
+#now:hover{
+	cursor: pointer;
+	opacity: 1;
+}
