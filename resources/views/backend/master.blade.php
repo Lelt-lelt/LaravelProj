@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>Myanmar Cinema -@yield('title')</title>
 
   <!-- Custom fonts for this template-->
   <link href="{{asset('backendtemplate/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -17,6 +17,8 @@
 
   <!-- Custom styles for this template-->
   <link href="{{asset('backendtemplate/css/sb-admin-2.min.css')}}" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{{asset('backendtemplate/style.css')}}">
 
 </head>
 
@@ -26,14 +28,15 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background: linear-gradient(to bottom, #8360c3,#2ebf91);">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+          <!-- <i class="fas fa-laugh-wink"></i> -->
+          <img src="{{asset('frontendTemplate/images/logo.png')}}" class="img-fluid" width="70" height="50">
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Admin <sup>2</sup></div>
       </a>
 
       <!-- Divider -->
@@ -64,8 +67,8 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Utilities:</h6>
             <a class="collapse-item" href="">Users</a>
-            <a class="collapse-item" href="">Items</a>
-            <a class="collapse-item" href="">Orders</a>
+            <a class="collapse-item" href="">Movies</a>
+            <a class="collapse-item" href="">Booking</a>
           </div>
         </div>
       </li>
@@ -79,24 +82,26 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="">Brands</a>
-            <a class="collapse-item" href="">Category</a>
-            <a class="collapse-item" href="">Sub category</a>
-           
+            <a class="collapse-item" href="">City</a>
+            <a class="collapse-item" href="">Township</a>
+            <a class="collapse-item" href="">Cinema</a>
+            <a class="collapse-item" href="">Theater</a>
+            <a class="collapse-item" href="">Run Date</a>
+            <a class="collapse-item" href="">Show Time</a>
           </div>
         </div>
       </li>
 
       <!-- Divider -->
-      <hr class="sidebar-divider">
+      <!-- <hr class="sidebar-divider"> -->
 
       <!-- Heading -->
-      <div class="sidebar-heading">
+      <!-- <div class="sidebar-heading">
         Addons
-      </div>
+      </div> -->
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
           <span>Brands</span>
@@ -113,21 +118,21 @@
             <a class="collapse-item" href="blank.html">Blank Page</a>
           </div>
         </div>
-      </li>
+      </li> -->
 
       <!-- Nav Item - Charts -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Categories</span></a>
-      </li>
+      </li> -->
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="tables.html">
           <i class="fas fa-fw fa-table"></i>
           <span>Sub Categories</span></a>
-      </li>
+      </li> -->
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -165,7 +170,7 @@
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-success" type="button">
                   <i class="fas fa-search fa-sm"></i>
                 </button>
               </div>
@@ -403,7 +408,7 @@
   <!-- Page level custom scripts -->
   <script src="{{asset('backendtemplate/js/demo/chart-area-demo.js')}}"></script>
   <script src="{{asset('backendtemplate/js/demo/chart-pie-demo.js')}}"></script>
-@yield('script');
+@yield('script')
 </body>
 
 </html>

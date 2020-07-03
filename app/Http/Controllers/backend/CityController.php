@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\City;
 
 class CityController extends Controller
 {
@@ -14,7 +15,8 @@ class CityController extends Controller
      */
     public function index()
     {
-        //
+        $cities = City::all();
+        return view('backend.city.index',compact('cities'));
     }
 
     /**
@@ -24,7 +26,7 @@ class CityController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.city.create');
     }
 
     /**
@@ -35,7 +37,19 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validation
+        $request->validate([
+            'name' => 'required|max:191'
+        ]);
+
+        // Data insert
+        $city = new City;
+        $city->name = $request->name;
+
+        $city->save();
+
+        // Return
+        return redirect()->route('cities.index');
     }
 
     /**
@@ -46,7 +60,7 @@ class CityController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('backend.city.detail');
     }
 
     /**
@@ -80,6 +94,9 @@ class CityController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $city = City::find($id);
+        $city->delete();
+
+        return redirect()->route('cities.index');
     }
 }

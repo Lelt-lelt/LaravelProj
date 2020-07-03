@@ -4,6 +4,9 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Booking;
+use App\Showtime;
+use App\Users;
 
 class BookingController extends Controller
 {
@@ -14,7 +17,8 @@ class BookingController extends Controller
      */
     public function index()
     {
-        //
+        $bookings = Booking::all();
+        return view('backend.booking.index',compact('bookings'));
     }
 
     /**
@@ -35,7 +39,7 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
