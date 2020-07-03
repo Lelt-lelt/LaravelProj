@@ -4,6 +4,9 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Showtime;
+use App\Theater;
+use App\Run_date;
 
 class ShowtimeController extends Controller
 {
@@ -15,6 +18,8 @@ class ShowtimeController extends Controller
     public function index()
     {
         //
+        $showtime = Showtime::all();
+        return view('backend.showtime.index',compact('showtime'));
     }
 
     /**
@@ -25,6 +30,10 @@ class ShowtimeController extends Controller
     public function create()
     {
         //
+        $theater = Theater::all();
+        $rundate = Run_date::all();
+        return view('backend.showtime.create',compact('theater','rundate'));
+
     }
 
     /**
@@ -36,6 +45,19 @@ class ShowtimeController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'showtime'=> 'required',
+            'noofseat' => 'required',
+
+        ]);
+        $showtime = new Showtime;
+        $showtime->showtime = $request->showtime;
+        $showtime->no_of_seat = $request->noofseat;
+        $showtime->theater_id = $request->theater;
+        $showtime->run_date_id = $request->rundate;
+
+        $showtime->save();
+        return redirect()->route('showtimes.index');
     }
 
     /**
@@ -58,6 +80,11 @@ class ShowtimeController extends Controller
     public function edit($id)
     {
         //
+        $theater = Theater::all();
+        $rundate = Run_date::all();
+        $showtime = Showtime::find($id);
+
+        return view('backend.showtime.edit',compact('showtime','theater','rundate'));
     }
 
     /**
@@ -70,6 +97,19 @@ class ShowtimeController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $request->validate([
+            'showtime'=> 'required',
+            'noofseat' => 'required',
+
+        ]);
+        $showtime = Showtime::find($id);
+        $showtime->showtime = $request->showtime;
+        $showtime->no_of_seat = $request->noofseat;
+        $showtime->theater_id = $request->theater;
+        $showtime->run_date_id = $request->rundate;
+
+        $showtime->save();
+        return redirect()->route('showtimes.index');
     }
 
     /**
@@ -81,5 +121,9 @@ class ShowtimeController extends Controller
     public function destroy($id)
     {
         //
+        $showtime = Showtime::find($id);
+        $showtime->delete();
+
+        return redirect()->round('showtimes.index');
     }
 }

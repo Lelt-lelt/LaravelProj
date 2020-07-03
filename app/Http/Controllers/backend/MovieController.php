@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Movie;
 
 class MovieController extends Controller
 {
@@ -15,6 +16,9 @@ class MovieController extends Controller
     public function index()
     {
         //
+        $movies = Movie::all();
+        return view('backend.movie.index',compact('movies'));
+
     }
 
     /**
@@ -25,6 +29,7 @@ class MovieController extends Controller
     public function create()
     {
         //
+        return view('backend.movie.create');
     }
 
     /**
@@ -35,7 +40,35 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
+        
         //
+        $request->validate([
+            'name'=> 'required|max:191',
+            //'photo'=> 'required|mimes:jpeg,bmp,png,jpg'
+            'actor'=> 'required|max:191',
+            'runtime'=>'required|max:191',
+            'description' => 'required|min:5',
+            'rating' => 'required'
+        ]);
+        //file upload
+        //$imageName = time().'.'.$request->photo->extension();
+
+        //$request->photo->move(public_path('images'),$imageName);
+
+        //$filepath = 'images/'.$imageName;
+
+        //data insert
+        $movie = new Movie;
+        $movie->name = $request->name;
+        //$movie->photo = $filepath;
+        $movie->actor =$request->actor;
+        $movie->description = $request->description;
+        $movie->rating = $request->rating;
+        $movie->runtime = $request->runtime;
+        $movie->save();
+
+        //return
+        return redirect()->route('movies.index');
     }
 
     /**
@@ -58,6 +91,8 @@ class MovieController extends Controller
     public function edit($id)
     {
         //
+        $movie = Movie::find($id);
+        return view('backend.movie.edit',compact('movie'));
     }
 
     /**
@@ -70,6 +105,41 @@ class MovieController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $request->validate([
+            'name'=> 'required|min:5|max:191',
+            //'photo'=> 'sometimes|mimes:jpeg,bmp,png,jpg'
+             'actor'=> 'required|max:191',
+            'runtime'=>'required|max:191',
+            'description' => 'required|min:5',
+            'rating' => 'required'
+        ]);
+        //file upload
+        //if($request->hasFile('photo')){
+            //File::delete($request->oldphoto);
+        //$imageName = time().'.'.$request->photo->extension();
+
+        //$request->photo->move(public_path('images'),$imageName);
+
+       // $filepath = 'images/'.$imageName;
+   // }else{
+       // $filepath = $request->oldphoto;
+    //}
+
+        //data update
+
+        $movie = movie::find($id);
+        //$movie->photo = $filepath;
+
+        //data insert
+        $movie->name = $request->name;
+        $movie->actor =$request->actor;
+        $movie->description = $request->description;
+        $movie->rating = $request->rating;
+        $movie->runtime = $request->runtime;
+        $movie->save();
+
+        //return
+        return redirect()->route('movies.index');
     }
 
     /**
@@ -81,5 +151,9 @@ class MovieController extends Controller
     public function destroy($id)
     {
         //
+        $movie = Movie::find($id);
+        $movie->delete();
+
+        return redirect()->route('movies.index');
     }
 }

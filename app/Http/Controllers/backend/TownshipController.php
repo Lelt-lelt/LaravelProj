@@ -4,6 +4,8 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Township;
+use App\City;
 
 class TownshipController extends Controller
 {
@@ -15,6 +17,8 @@ class TownshipController extends Controller
     public function index()
     {
         //
+        $township = Township::all();
+        return view('backend.township.index',compact('township'));
     }
 
     /**
@@ -25,6 +29,9 @@ class TownshipController extends Controller
     public function create()
     {
         //
+        $city = City::all();
+        return view('backend.township.create',compact('city'));
+
     }
 
     /**
@@ -36,6 +43,18 @@ class TownshipController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'name'=> 'required|min:5|max:191',
+            
+        ]);
+       
+        $township = new Township;
+        $township->name = $request->name;
+        $township->city_id =$request->city;
+        $township->save();
+
+        //return
+        return redirect()->route('townships.index');
     }
 
     /**
@@ -58,6 +77,9 @@ class TownshipController extends Controller
     public function edit($id)
     {
         //
+        $city = City::all();
+         $township = Township::find($id);
+        return view('backend.township.edit',compact('township','city'));
     }
 
     /**
@@ -70,6 +92,17 @@ class TownshipController extends Controller
     public function update(Request $request, $id)
     {
         //
+         $request->validate([
+            'name' => 'required|max:191',
+            'city' => 'required|max:191'
+        ]);
+
+        $township = Township::find($id);
+        $township->name = $request->name;
+        $township->city_id = $request->city;
+
+        $township->save();
+        return redirect()->route('townships.index');
     }
 
     /**
@@ -81,5 +114,9 @@ class TownshipController extends Controller
     public function destroy($id)
     {
         //
+        $township = Township::find($id);
+        $township->delete();
+
+        return redirect()->route('townships.index');
     }
 }

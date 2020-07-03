@@ -34,3 +34,12 @@ Route::get('/login',function(){
 Route::get('/booking',function(){
 	return view('frontend.booking');
 });
+
+Route::resource('townships','backend\TownshipController');
+
+Route::resource('movies','backend\MovieController');
+
+Route::resource('rundates','backend\Run_dateController');
+
+Route::resource('showtimes','backend\ShowtimeController');
+
