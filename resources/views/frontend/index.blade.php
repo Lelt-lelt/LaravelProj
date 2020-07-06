@@ -94,10 +94,11 @@
 	<div class="row">
 		<div class="col-lg-3 col-md-12 col-sm-12 my-5">
 			<select class="custom-select mb-2">
-				<option selected>Township</option>
-				<option value="1">One</option>
-				<option value="2">Two</option>
-				<option value="3">Three</option>
+				<option selected>City</option>
+				@foreach($city as $city)
+				<option value="{{$city->id}}">{{$city->name}}
+				</option>
+				@endforeach
 			</select>
 			<select class="custom-select">
 				<option selected>Cinema</option>
@@ -108,7 +109,8 @@
 		</div>
 		<div class="col-lg-9 my-5" id="now">
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-12">
+				@foreach($rundate as $rundate)
+				<div class="col-lg-6 col-md-6 col-sm-12 my-3">
 					<!-- Button trigger modal -->
 					<a data-toggle="modal" data-target="#exampleModalLong">
 						<img src="https://mdbootstrap.com/img/screens/yt/screen-video-3.jpg" class="img-fluid z-depth-1">
@@ -119,7 +121,7 @@
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLongTitle">Captain America : Civil War</h5>
+									<h5 class="modal-title" id="exampleModalLongTitle">Movie Name:{{$rundate->movie->name}}</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
@@ -127,158 +129,28 @@
 								<div class="modal-body">
 									<iframe width="467" height="315" src="https://www.youtube.com/embed/dKrVegVI0Us" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									<ul class="mt-5">
-										<li>Showing Date : July 1 - July 7</li>
-										<li>Cinema Place : All</li>
+										<li>Showing Date :{{$rundate->starting_date}} to {{$rundate->end_date}}</li>
+										<li>Cinema Place : {{$rundate->cinema->name}}</li>
 									</ul>
 									<h5>Plot</h5>
-									<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									<p class="text-justify">{{$rundate->movie->description}}</p>
 									<h5>Casts</h5>
-									<p>Chris Evans</p>
-									<h5>Production</h5>
-									<p> Artisan Entertainment </p>
+									<p>{{$rundate->movie->actor}}</p>
+									
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-primary">Booking</button>
+									<a href="{{route('booking',$rundate->id)}}"><button type="submit" class="btn btn-primary">Booking</button>
+</a>
 								</div>
 							</div>
 						</div>
 					</div>	
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<!-- Button trigger modal -->
-					<a data-toggle="modal" data-target="#exampleModalLong">
-						<img src="https://mdbootstrap.com/img/screens/yt/screen-video-3.jpg" class="img-fluid z-depth-1">
-					</a>
-
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLongTitle">Captain America : Civil War</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<iframe width="467" height="315" src="https://www.youtube.com/embed/dKrVegVI0Us" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									<ul class="mt-5">
-										<li>Showing Date : July 1 - July 7</li>
-										<li>Cinema Place : All</li>
-									</ul>
-									<h5>Plot</h5>
-									<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-									<h5>Casts</h5>
-									<p>Chris Evans</p>
-									<h5>Production</h5>
-									<p> Artisan Entertainment </p>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-primary">Booking</button>
-								</div>
-							</div>
-						</div>
-					</div>	
-				</div>
+				@endforeach
+				
 			</div>
-			<div class="row mt-4">
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<!-- Button trigger modal -->
-					<a data-toggle="modal" data-target="#exampleModalLong">
-						<img src="https://mdbootstrap.com/img/screens/yt/screen-video-3.jpg" class="img-fluid z-depth-1">
-					</a>
-
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLongTitle">Captain America : Civil War</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<iframe width="467" height="315" src="https://www.youtube.com/embed/dKrVegVI0Us" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									<ul class="mt-5">
-										<li>Showing Date : July 1 - July 7</li>
-										<li>Cinema Place : All</li>
-									</ul>
-									<h5>Plot</h5>
-									<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-									<h5>Casts</h5>
-									<p>Chris Evans</p>
-									<h5>Production</h5>
-									<p> Artisan Entertainment </p>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-primary">Booking</button>
-								</div>
-							</div>
-						</div>
-					</div>	
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<!-- Button trigger modal -->
-					<a data-toggle="modal" data-target="#exampleModalLong">
-						<img src="https://mdbootstrap.com/img/screens/yt/screen-video-3.jpg" class="img-fluid z-depth-1">
-					</a>
-
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLongTitle">Captain America : Civil War</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<iframe width="467" height="315" src="https://www.youtube.com/embed/dKrVegVI0Us" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									<ul class="mt-5">
-										<li>Showing Date : July 1 - July 7</li>
-										<li>Cinema Place : All</li>
-									</ul>
-									<h5>Plot</h5>
-									<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-									<h5>Casts</h5>
-									<p>Chris Evans</p>
-									<h5>Production</h5>
-									<p> Artisan Entertainment </p>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-primary">Booking</button>
-								</div>
-							</div>
-						</div>
-					</div>	
-				</div>
-			</div>
+			
 		</div>
 	</div>
 </div>

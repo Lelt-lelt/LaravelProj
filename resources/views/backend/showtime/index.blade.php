@@ -37,10 +37,11 @@
 					{{$row->no_of_seat}}
 				</td>
 				<td>
-					{{$row->theater_id}}
+					{{$row->theater->name}}
 				</td>
 				<td>
-					{{$row->run_date_id}}
+					{{$row->run_date->starting_date}} to
+					{{$row->run_date->end_date}}
 				</td>
 				<td>
 					<a href="{{route('showtimes.edit',$row->id)}}" class="btn btn-warning float-left">Edit</a>

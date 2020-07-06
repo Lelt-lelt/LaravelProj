@@ -10,4 +10,8 @@ class City extends Model
     use SoftDeletes;
 
 	protected $fillable = ['name'];
+
+	public function township(){
+		return $this->hasMany('App\Township');
+	}
 }

@@ -32,7 +32,7 @@
 					{{$row->name}}
 				</td>
 				<td>
-					{{$row->city_id}}
+					{{$row->city->name}}
 				</td>
 				<td>
 					<a href="{{route('townships.edit',$row->id)}}" class="btn btn-warning float-left">Edit</a>

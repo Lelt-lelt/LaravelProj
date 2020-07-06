@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function(){
-	return view('frontend.index');
-});
+
 
 Route::get('/master', function(){
 	return view('backend.master');
@@ -46,4 +44,12 @@ Route::resource('cities','backend\CityController');
 Route::resource('cinemas','backend\CinemaController');
 Route::resource('theaters','backend\TheaterController');
 Route::resource('bookings','backend\BookingController');
+
+Route::get('/','frontend\FrontendController@index')->name('index');
+
+Route::get('/booking/{id}','frontend\FrontendController@booking')->name('booking');
+
+Route::get('/cinema','frontend\FrontendController@cinema')->name('cinema');
+
+Route::get('/theater/{id}','frontend\FrontendController@theater')->name('theater');
 
