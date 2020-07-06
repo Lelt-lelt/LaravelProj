@@ -14,15 +14,15 @@
 
 	<ul class="showcase">
 		<li>
-			<div class="seat"></div>
+			<div class="seat" style="background-color: green"></div>
 			<small>Available</small>
 		</li>
 		<li>
-			<div class="seat selected"></div>
+			<div class="seat" style="background-color: red"></div>
 			<small>Selected</small>
 		</li>
 		<li>
-			<div class="seat occupied"></div>
+			<div class="seat"style="background-color: white"></div>
 			<small>Occupied</small>
 		</li>
 	</ul>
@@ -31,174 +31,174 @@
 		<div class="screen"></div>
 		<div class="front">
 			<div class="row">
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
 			</div>
 			<div class="row">
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
 			</div>
 			<div class="row">
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
 			</div>
 		</div>
 		
 		<div class="middle">
 			<div class="row">
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
 			</div>
 			<div class="row">
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
 			</div>
 			<div class="row">
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
 			</div>
 		</div>
 		
 		<div class="back">
 			<div class="row">
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
 			</div>
 			<div class="row">
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
 			</div>
 			<div class="row">
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
-				<div class="seat"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
+				<div class="seat available"></div>
 			</div>
 		</div>
 		
 		<div class="couple">
 			<div class="row">
-			<!-- <div class="seat"></div> -->
-			<div class="seat mr-2"></div>
-			<!-- <div class="seat"></div> -->
-			<div class="seat mr-2"></div>
-			<!-- <div class="seat"></div> -->
-			<div class="seat mr-2"></div>
-			<!-- <div class="seat"></div> -->
-			<div class="seat mr-2"></div>
-			<!-- <div class="seat"></div> -->
-			<div class="seat mr-2"></div>
-			<!-- <div class="seat"></div> -->
-			<div class="seat"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available mr-2"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available mr-2"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available mr-2"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available mr-2"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available mr-2"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available"></div>
 		</div>
 		<div class="row">
-			<!-- <div class="seat"></div> -->
-			<div class="seat mr-2"></div>
-			<!-- <div class="seat"></div> -->
-			<div class="seat mr-2"></div>
-			<!-- <div class="seat"></div> -->
-			<div class="seat mr-2"></div>
-			<!-- <div class="seat"></div> -->
-			<div class="seat mr-2"></div>
-			<!-- <div class="seat"></div> -->
-			<div class="seat mr-2"></div>
-			<!-- <div class="seat"></div> -->
-			<div class="seat"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available mr-2"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available mr-2"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available mr-2"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available mr-2"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available mr-2"></div>
+			<!-- <div class="seat available"></div> -->
+			<div class="seat available"></div>
 		</div>
 		</div>
 		
 	</div>
 
 	<p class="text">
-		You have selected <span id="count">0</span> seats for the price of $<span
+		You have selected <span id="count">0</span> seat availables for the price of $<span
 		id="total"
 		>0</span
 		>!
