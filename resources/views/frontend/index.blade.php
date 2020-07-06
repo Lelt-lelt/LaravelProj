@@ -92,19 +92,34 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-lg-3 col-md-12 col-sm-12 my-5">
-			<select class="custom-select mb-2">
+		<div class="col-lg-3 col-md-12 col-sm-12 my-5" id="menubox">
+			<ul>
+				<li class="has-children">
+					<a href="#">Store</a>
+					<ul class="dropdown">
+						<li class="has-children">
+							<a href="#">One</a>
+							<ul class="dropdown">
+								<li><a href="#">Three</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Register</a></li>
+			</ul>
+			<!-- <select class="custom-select mb-2">
 				<option selected>Township</option>
-				<option value="1">One</option>
-				<option value="2">Two</option>
-				<option value="3">Three</option>
+				@foreach($townships as $town)
+				<option value="1">{{$town->name}}</option>
+				@endforeach
 			</select>
 			<select class="custom-select">
 				<option selected>Cinema</option>
-				<option value="1">One</option>
-				<option value="2">Two</option>
-				<option value="3">Three</option>
-			</select>
+				@foreach($cinemas as $cinema)
+				<option value="1">{{$cinema->name}}</option>
+				@endforeach
+			</select> -->
 		</div>
 		<div class="col-lg-9 my-5" id="now">
 			<div class="row">
@@ -131,11 +146,7 @@
 										<li>Cinema Place : All</li>
 									</ul>
 									<h5>Plot</h5>
-									<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 									<h5>Casts</h5>
 									<p>Chris Evans</p>
@@ -192,12 +203,12 @@
 						</div>
 					</div>	
 				</div>
-			</div>
+			</div>			
 			<div class="row mt-4">
 				<div class="col-lg-6 col-md-6 col-sm-12">
 					<!-- Button trigger modal -->
 					<a data-toggle="modal" data-target="#exampleModalLong">
-						<img src="https://mdbootstrap.com/img/screens/yt/screen-video-3.jpg" class="img-fluid z-depth-1">
+						<!-- <img src="https://mdbootstrap.com/img/screens/yt/screen-video-3.jpg" class="img-fluid z-depth-1"> -->
 					</a>
 
 					<!-- Modal -->

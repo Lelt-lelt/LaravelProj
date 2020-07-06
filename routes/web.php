@@ -47,3 +47,6 @@ Route::resource('cinemas','backend\CinemaController');
 Route::resource('theaters','backend\TheaterController');
 Route::resource('bookings','backend\BookingController');
 
+Route::get('/','frontend\FrontendController@index')->name('index');
+
+
