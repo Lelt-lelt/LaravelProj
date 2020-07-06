@@ -23,12 +23,7 @@
 
 </head>
 <body>
-	<!-- navigation -->
-
-
-
-
-
+<!-- navigation -->
 <nav class="navbar navbar-expand-lg navbar-light">
 	<div class="container">
 		<a class="navbar-brand" href="#"><img src="{{asset('frontendTemplate/images/logo.png')}}" class="img-fluid" style="height: 70px; width: 110px;"></a>
