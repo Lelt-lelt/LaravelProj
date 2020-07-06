@@ -44,7 +44,7 @@
 					<td>{{$row->name}}</td>
 					<td>{{$row->max_no_of_seat}}</td>
 					<td>{{$row->screen_size}}</td>
-					<td>{{$row->cinema_id}}</td>
+					<td>{{$row->cinema->name}}</td>
 					<td>
 						<a href="{{route('theaters.edit',$row->id)}}" class="btn float-left mx-3 text-white">Edit</a>
 						<form method="POST" action="{{route('theaters.destroy',$row->id)}}" onsubmit="return confirm('Are you sure want to delete')">

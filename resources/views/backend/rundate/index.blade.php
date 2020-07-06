@@ -37,10 +37,10 @@
 					{{$row->end_date}}
 				</td>
 				<td>
-					{{$row->cinema_id}}
+					{{$row->cinema->name}}
 				</td>
 				<td>
-					{{$row->movie_id}}
+					{{$row->movie->name}}
 				</td>
 				<td>
 					<a href="{{route('rundates.edit',$row->id)}}" class="btn btn-warning float-left">Edit</a>

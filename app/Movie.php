@@ -12,4 +12,8 @@ class Movie extends Model
     protected $fillable = [
     	'name','run_time','actor','description','rating'
     ];
+
+    public function rundate(){
+    	return $this->hasMany('App\Rundate');
+    }
 }

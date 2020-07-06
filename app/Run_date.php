@@ -12,4 +12,16 @@ class Run_date extends Model
     protected $fillable = [
     	'starting_date','end_date'
     ];
+
+    public function cinema(){
+    	return $this->belongsTo('App\Cinema');
+    }
+
+    public function showtime(){
+    	return $this->hasMany('App\Showtime');
+    }
+
+    public function movie(){
+    	return $this->belongsTo('App\Movie');
+    }
 }

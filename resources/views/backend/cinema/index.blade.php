@@ -44,7 +44,7 @@
 					<td>{{$row->name}}</td>
 					<td>{{$row->address}}</td>
 					<td>{{$row->phone}}</td>
-					<td>{{$row->township_id}}</td>
+					<td>{{$row->township->name}}</td>
 					<td>
 						<a href="{{route('cinemas.edit',$row->id)}}" class="btn btn-warning float-left mx-3">Edit</a>
 						<form method="POST" action="{{route('cinemas.destroy',$row->id)}}" onsubmit="return confirm('Are you sure want to delete')">

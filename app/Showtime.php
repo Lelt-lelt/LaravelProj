@@ -12,4 +12,12 @@ class Showtime extends Model
     protected $fillable = [
     	'showtime','no_of_seat',
     ];
+
+    public function theater(){
+    	return $this->belongsTo('App\Theater');
+    }
+
+    public function run_date(){
+    	return $this->belongsTo('App\Run_date');
+    }
 }
